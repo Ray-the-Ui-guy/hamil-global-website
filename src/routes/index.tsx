@@ -49,6 +49,20 @@ const newsList = [
   { title: "HanmiGlobal teams up with AtkinsRealis for US energy projects", date: "2024.05.05" },
 ];
 
+const testimonials1 = [
+  { name: "Michael Chen", initial: "M", role: "Global Corporation", quote: "HanmiGlobal's proactive management and technical expertise delivered our complex project ahead of schedule.", bg: "bg-blue-50", avatarBg: "bg-blue-200 text-blue-800" },
+  { name: "Sarah Jenkins", initial: "S", role: "Tech Industry", quote: "Their dedication to sustainable practices completely transformed our infrastructure approach.", bg: "bg-emerald-50", avatarBg: "bg-emerald-200 text-emerald-800" },
+  { name: "David Alaba", initial: "D", role: "Logistics", quote: "The CM at Risk model they provided gave us total confidence in our budget and timeline.", bg: "bg-purple-50", avatarBg: "bg-purple-200 text-purple-800" },
+  { name: "Elena Rodriguez", initial: "E", role: "Retail Group", quote: "Exceptional quality control and supervision from start to finish. Highly recommended.", bg: "bg-rose-50", avatarBg: "bg-rose-200 text-rose-800" },
+];
+
+const testimonials2 = [
+  { name: "James Wilson", initial: "J", role: "Energy Sector", quote: "Outstanding engineering and consulting. They navigated the regulatory landscape perfectly.", bg: "bg-amber-50", avatarBg: "bg-amber-200 text-amber-800" },
+  { name: "Anita Desai", initial: "A", role: "Real Estate", quote: "Our redevelopment project was a massive success thanks to their specialized tech services.", bg: "bg-cyan-50", avatarBg: "bg-cyan-200 text-cyan-800" },
+  { name: "Robert Fox", initial: "R", role: "Infrastructure", quote: "They brought international expertise that proved invaluable to our overseas expansion.", bg: "bg-fuchsia-50", avatarBg: "bg-fuchsia-200 text-fuchsia-800" },
+  { name: "Lisa Wong", initial: "L", role: "Healthcare", quote: "Their focus on safety and precision is exactly what our medical facility project needed.", bg: "bg-teal-50", avatarBg: "bg-teal-200 text-teal-800" },
+];
+
 const projects = [
   { img: p1, title: "Riverbend Residences", tag: "Residential · 2024" },
   { img: p2, title: "Meridian Corporate Tower", tag: "Commercial · 2024" },
@@ -135,7 +149,7 @@ function Index() {
     <div className="min-h-screen bg-white text-neutral-900 font-sans">
       {/* NAV */}
       <header className="fixed top-4 inset-x-4 lg:inset-x-8 z-50">
-        <div className={`max-w-[1600px] mx-auto px-4 h-12 md:h-14 flex items-stretch border transition-all duration-300 ${isScrolled ? "bg-white text-black border-neutral-200 shadow-sm" : isBlurred ? "bg-black/20 backdrop-blur-md text-white border-white/20 shadow-sm" : "bg-transparent text-white border-white"}`}>
+        <div className={`max-w-[1600px] mx-auto px-4 h-[50px] md:h-[58px] flex items-stretch border transition-all duration-300 ${isScrolled ? "bg-white text-black border-neutral-200 shadow-sm" : isBlurred ? "bg-black/20 backdrop-blur-md text-white border-white/20 shadow-sm" : "bg-transparent text-white border-white"}`}>
           <a href="#" className={`flex items-center px-4 md:px-6 border-r transition-colors duration-300 ${isScrolled ? "border-neutral-200" : isBlurred ? "border-white/20" : "border-white"}`}>
             <img src={isScrolled ? logo1 : logoLight} alt="HanmiGlobal Logo" className="h-4 md:h-5 w-auto" />
           </a>
@@ -304,7 +318,7 @@ function Index() {
               <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
               
               {/* Blinking Korea HQ Marker */}
-              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[28%] right-[14%] shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
+              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[32%] left-[22%] ml-1 shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
                 <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
               </div>
             </div>
@@ -402,26 +416,14 @@ function Index() {
         
         {/* Layer 1: Left moving */}
         <div className="flex w-max animate-marquee-left gap-6 mb-8 px-4 hover:[animation-play-state:paused]">
-          {[...Array(8)].map((_, i) => (
-            <div key={`t1-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 group hover:border-black transition-colors">
-              <p className="text-neutral-600 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"HanmiGlobal's proactive management and technical expertise delivered our complex project ahead of schedule."</p>
+          {[...testimonials1, ...testimonials1, ...testimonials1, ...testimonials1].map((t, i) => (
+            <div key={`t1-${i}`} className={`w-[450px] p-8 border border-neutral-200 ${t.bg} shrink-0 group hover:border-black transition-colors rounded-2xl`}>
+              <p className="text-neutral-700 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"{t.quote}"</p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-neutral-300 flex items-center justify-center font-bold text-white shrink-0">C{i+1}</div>
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold shrink-0 ${t.avatarBg}`}>{t.initial}</div>
                 <div>
-                  <h4 className="font-bold text-sm tracking-widest uppercase">Client Name {i+1}</h4>
-                  <p className="text-xs text-neutral-500">Global Corporation</p>
-                </div>
-              </div>
-            </div>
-          ))}
-          {[...Array(8)].map((_, i) => (
-            <div key={`t1-dup-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 group hover:border-black transition-colors">
-              <p className="text-neutral-600 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"HanmiGlobal's proactive management and technical expertise delivered our complex project ahead of schedule."</p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-neutral-300 flex items-center justify-center font-bold text-white shrink-0">C{i+1}</div>
-                <div>
-                  <h4 className="font-bold text-sm tracking-widest uppercase">Client Name {i+1}</h4>
-                  <p className="text-xs text-neutral-500">Global Corporation</p>
+                  <h4 className="font-bold text-sm tracking-widest uppercase">{t.name}</h4>
+                  <p className="text-xs text-neutral-500">{t.role}</p>
                 </div>
               </div>
             </div>
@@ -430,26 +432,14 @@ function Index() {
 
         {/* Layer 2: Right moving */}
         <div className="flex w-max animate-marquee-right gap-6 px-4 hover:[animation-play-state:paused]">
-          {[...Array(8)].map((_, i) => (
-            <div key={`t2-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 group hover:border-black transition-colors">
-              <p className="text-neutral-600 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"Their dedication to sustainable practices and innovative solutions completely transformed our infrastructure."</p>
+          {[...testimonials2, ...testimonials2, ...testimonials2, ...testimonials2].map((t, i) => (
+            <div key={`t2-${i}`} className={`w-[450px] p-8 border border-neutral-200 ${t.bg} shrink-0 group hover:border-black transition-colors rounded-2xl`}>
+              <p className="text-neutral-700 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"{t.quote}"</p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-neutral-300 flex items-center justify-center font-bold text-white shrink-0">E{i+1}</div>
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold shrink-0 ${t.avatarBg}`}>{t.initial}</div>
                 <div>
-                  <h4 className="font-bold text-sm tracking-widest uppercase">Executive {i+1}</h4>
-                  <p className="text-xs text-neutral-500">Tech Industry</p>
-                </div>
-              </div>
-            </div>
-          ))}
-          {[...Array(8)].map((_, i) => (
-            <div key={`t2-dup-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 group hover:border-black transition-colors">
-              <p className="text-neutral-600 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"Their dedication to sustainable practices and innovative solutions completely transformed our infrastructure."</p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-neutral-300 flex items-center justify-center font-bold text-white shrink-0">E{i+1}</div>
-                <div>
-                  <h4 className="font-bold text-sm tracking-widest uppercase">Executive {i+1}</h4>
-                  <p className="text-xs text-neutral-500">Tech Industry</p>
+                  <h4 className="font-bold text-sm tracking-widest uppercase">{t.name}</h4>
+                  <p className="text-xs text-neutral-500">{t.role}</p>
                 </div>
               </div>
             </div>

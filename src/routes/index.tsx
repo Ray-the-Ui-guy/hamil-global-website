@@ -143,7 +143,7 @@ function Index() {
             {nav.map((n) => <a key={n} href={`#${n.toLowerCase().replace(/\s/g, "")}`} className="hover:opacity-60 transition">{n}</a>)}
           </nav>
           <div className="flex items-center gap-4 lg:gap-6 text-xs px-4 md:px-6 ml-auto lg:ml-0">
-            <DropdownMenu>
+            <DropdownMenu modal={false}>
               <DropdownMenuTrigger className={`hidden md:flex items-center gap-1 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest border transition-colors duration-300 outline-none ${isScrolled ? "border-neutral-200 hover:bg-neutral-100" : "border-white/30 hover:bg-white/10"}`}>
                 ENG <CaretDown weight="regular" className="size-3 opacity-70" />
               </DropdownMenuTrigger>

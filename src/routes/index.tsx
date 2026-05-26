@@ -326,32 +326,32 @@ function Index() {
             <div className="lg:col-span-6 self-end text-white/70 text-lg">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6 pt-8 border-t border-white/20">
                 <div className="flex flex-col items-start">
-                  <Buildings className="size-6 text-green-400 mb-3" />
+                  <Buildings weight="duotone" className="size-9 text-emerald-500/70 mb-3" />
                   <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={11} /></div>
                   <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Group Company</div>
                 </div>
                 <div className="flex flex-col items-start">
-                  <Globe className="size-6 text-green-400 mb-3" />
+                  <Globe weight="duotone" className="size-9 text-emerald-500/70 mb-3" />
                   <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={13} /></div>
                   <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Global Branchs</div>
                 </div>
                 <div className="flex flex-col items-start">
-                  <Users className="size-6 text-green-400 mb-3" />
+                  <Users weight="duotone" className="size-9 text-emerald-500/70 mb-3" />
                   <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={2100} />+</div>
                   <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Professional Employees</div>
                 </div>
                 <div className="flex flex-col items-start">
-                  <Flag className="size-6 text-green-400 mb-3" />
+                  <Flag weight="duotone" className="size-9 text-emerald-500/70 mb-3" />
                   <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={66} />+</div>
                   <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Countries</div>
                 </div>
                 <div className="flex flex-col items-start">
-                  <Briefcase className="size-6 text-green-400 mb-3" />
+                  <Briefcase weight="duotone" className="size-9 text-emerald-500/70 mb-3" />
                   <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={3202} />+</div>
                   <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Projects</div>
                 </div>
                 <div className="flex flex-col items-start">
-                  <Trophy className="size-6 text-green-400 mb-3" />
+                  <Trophy weight="duotone" className="size-9 text-emerald-500/70 mb-3" />
                   <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={8} /></div>
                   <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">World Ranking (ENR 2025)</div>
                 </div>

@@ -338,7 +338,7 @@ function Index() {
               <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
               
               {/* Blinking Korea HQ Marker */}
-              <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full top-[32%] left-[22%] ml-[140px] z-10" style={{boxShadow: '0 0 15px rgba(34,197,94,0.8)'}}>
+              <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full top-[30%] left-[22%] ml-[160px] z-10" style={{boxShadow: '0 0 15px rgba(34,197,94,0.8)'}}>
                 <div className="absolute inset-0 bg-green-400 rounded-full animate-ping"></div>
               </div>
             </div>
@@ -541,24 +541,24 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-black text-white pt-24 overflow-hidden">
+      <footer className="bg-black text-white pt-16 overflow-hidden">
         <div className="max-w-[1600px] mx-auto px-8">
-          <div className="grid md:grid-cols-5 gap-12 mb-20">
-            <div className="md:col-span-2 pr-12">
-              <div className="flex items-center mb-6">
+          <div className="grid md:grid-cols-5 gap-8 mb-12">
+            <div className="md:col-span-2 pr-8">
+              <div className="flex items-center mb-4">
                 <img src={logo1} alt="HanmiGlobal Logo" className="h-6 w-auto" />
               </div>
               <p className="text-sm text-white/60 max-w-sm leading-relaxed">Engineering structures that outlast generations — across commercial, residential, industrial and infrastructure projects.</p>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6">Explore</div>
-              <ul className="space-y-3 text-sm text-white/80 font-medium">
+              <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Explore</div>
+              <ul className="space-y-2 text-sm text-white/80 font-medium">
                 {nav.map((n) => <li key={n}><a href={`#${n.toLowerCase()}`} className="hover:text-white transition-colors">{n}</a></li>)}
               </ul>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6">Socials</div>
-              <ul className="space-y-3 text-sm text-white/80 font-medium">
+              <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Socials</div>
+              <ul className="space-y-2 text-sm text-white/80 font-medium">
                 <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Facebook</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">X (Twitter)</a></li>
@@ -566,8 +566,8 @@ function Index() {
               </ul>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6">Contact</div>
-              <ul className="space-y-3 text-sm text-white/80 font-medium">
+              <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Contact</div>
+              <ul className="space-y-2 text-sm text-white/80 font-medium">
                 <li><a href="mailto:hello@hanmiglobal.example" className="hover:text-white transition-colors">hello@hanmiglobal.example</a></li>
                 <li><a href="tel:5550142200" className="hover:text-white transition-colors">(555) 014-2200</a></li>
               </ul>

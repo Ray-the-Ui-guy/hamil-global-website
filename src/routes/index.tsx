@@ -244,7 +244,9 @@ function Index() {
         <div className="max-w-[1600px] mx-auto px-8">
           <div className="flex items-end justify-between mb-16 flex-wrap gap-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-6">Projects</p>
+              <div className="inline-block px-4 py-1.5 border border-neutral-300 text-xs font-bold uppercase tracking-widest text-neutral-600 mb-6">
+                Projects
+              </div>
               <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">Selected work.</h2>
             </div>
             <a href="#" className="inline-flex items-center gap-2 text-sm font-medium border-b border-black pb-1">View all projects <ArrowUpRight className="size-4" /></a>
@@ -282,7 +284,7 @@ function Index() {
         <div className="max-w-[1600px] mx-auto px-8">
           <div className="grid lg:grid-cols-12 gap-12 mb-16">
             <div className="lg:col-span-6">
-              <div className="inline-block px-4 py-1.5 border border-white/20 text-xs font-bold uppercase tracking-widest text-white mb-6">
+              <div className="inline-block px-4 py-1.5 border-2 border-white/30 text-xs font-bold uppercase tracking-widest text-white mb-6">
                 Global Network
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">Building territories beyond Korea and around the world</h2>
@@ -326,7 +328,7 @@ function Index() {
           
           <div className="grid lg:grid-cols-2 gap-x-12 gap-y-8">
             {/* Main News Card */}
-            <a href="#" className="group block relative overflow-hidden rounded-2xl bg-neutral-900 aspect-[16/10] flex items-end">
+            <a href="#" className="group block relative overflow-hidden bg-neutral-900 aspect-[16/10] flex items-end">
               <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="News Image" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
               <div className="relative z-10 p-8 w-full">
@@ -466,7 +468,7 @@ function Index() {
       {/* FOOTER */}
       <footer className="bg-black text-white pt-24 overflow-hidden">
         <div className="max-w-[1600px] mx-auto px-8">
-          <div className="grid md:grid-cols-4 gap-12 mb-20">
+          <div className="grid md:grid-cols-5 gap-12 mb-20">
             <div className="md:col-span-2 pr-12">
               <div className="flex items-center mb-6">
                 <img src={logo1} alt="HanmiGlobal Logo" className="h-6 w-auto" />
@@ -476,7 +478,13 @@ function Index() {
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6">Explore</div>
               <ul className="space-y-3 text-sm text-white/80 font-medium">
-                {nav.slice(0, 4).map((n) => <li key={n}><a href={`#${n.toLowerCase()}`} className="hover:text-white transition-colors">{n}</a></li>)}
+                {nav.slice(0, 3).map((n) => <li key={n}><a href={`#${n.toLowerCase()}`} className="hover:text-white transition-colors">{n}</a></li>)}
+              </ul>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6 opacity-0">More</div>
+              <ul className="space-y-3 text-sm text-white/80 font-medium">
+                {nav.slice(3).map((n) => <li key={n}><a href={`#${n.toLowerCase()}`} className="hover:text-white transition-colors">{n}</a></li>)}
               </ul>
             </div>
             <div>
@@ -490,7 +498,7 @@ function Index() {
 
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 py-8 border-t border-white/10 text-xs text-white/40 font-medium">
             <p>© {new Date().getFullYear()} HanmiGlobal (demo). All rights reserved.</p>
-            <p>Educational reconstruction · not affiliated with HanmiGlobal Co., Ltd.</p>
+            <p>Educational reconstruction · Built by <a href="https://github.com/Ray-the-Ui-guy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Heritage Isaac</a></p>
           </div>
 
           {/* The "Enlarged" Logo Section */}

@@ -158,7 +158,7 @@ function Index() {
           </nav>
           <div className="flex items-center gap-4 lg:gap-6 text-xs px-4 md:px-6 ml-auto lg:ml-0">
             <DropdownMenu modal={false}>
-              <DropdownMenuTrigger className={`hidden md:flex items-center gap-1 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest border transition-colors duration-300 outline-none ${isScrolled ? "border-neutral-200 hover:bg-neutral-100" : "border-white/30 hover:bg-white/10"}`}>
+              <DropdownMenuTrigger className={`hidden md:flex items-center gap-1 px-4 py-1.5 rounded-none text-[10px] font-bold tracking-widest border transition-colors duration-300 outline-none ${isScrolled ? "border-neutral-200 hover:bg-neutral-100" : "border-white/30 hover:bg-white/10"}`}>
                 ENG <CaretDown weight="regular" className="size-3 opacity-70" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="min-w-[80px] rounded-none shadow-xl border border-neutral-100 bg-white p-1">

@@ -304,7 +304,7 @@ function Index() {
               <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
               
               {/* Blinking Korea HQ Marker */}
-              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[38%] right-[17%] shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
+              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[32%] right-[22%] shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
                 <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
                 <span className="absolute top-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] tracking-widest uppercase font-bold text-green-400 pointer-events-none">
                   Seoul HQ

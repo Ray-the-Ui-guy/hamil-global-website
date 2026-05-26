@@ -358,7 +358,7 @@ function Index() {
             <div className="flex w-full">
               {[1,2,3].map((i) => (
                 <a href="#" key={`r1-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
-                  <span className="text-neutral-400 font-bold text-sm md:text-base group-hover:text-white transition-colors tracking-widest uppercase">Logo {i}</span>
+                  <img src={logo1} alt="HanmiGlobal" className="h-5 md:h-6 w-auto opacity-40 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
                 </a>
               ))}
             </div>
@@ -366,7 +366,7 @@ function Index() {
             <div className="flex w-full">
               {[4,5,6,7].map((i) => (
                 <a href="#" key={`r2-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
-                  <span className="text-neutral-400 font-bold text-sm md:text-base group-hover:text-white transition-colors tracking-widest uppercase">Logo {i}</span>
+                  <img src={logo1} alt="HanmiGlobal" className="h-5 md:h-6 w-auto opacity-40 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
                 </a>
               ))}
             </div>
@@ -374,7 +374,7 @@ function Index() {
             <div className="flex w-full">
               {[8,9,10,11].map((i) => (
                 <a href="#" key={`r3-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
-                  <span className="text-neutral-400 font-bold text-sm md:text-base group-hover:text-white transition-colors tracking-widest uppercase">Logo {i}</span>
+                  <img src={logo1} alt="HanmiGlobal" className="h-5 md:h-6 w-auto opacity-40 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
                 </a>
               ))}
             </div>

@@ -312,6 +312,43 @@ function Index() {
         </div>
       </section>
 
+      {/* COMPANY */}
+      {/* GROUP COMPANY */}
+      <section id="groupcompany" className="pt-32 pb-16 bg-neutral-100">
+        <div className="max-w-[1600px] mx-auto px-8 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-6">Group Company</h2>
+          <p className="text-neutral-600 text-lg mb-16">Introducing HanmiGlobal's Group Companies and Joint Ventures</p>
+          
+          <div className="flex flex-col w-full mb-8 border-l border-t border-neutral-200">
+            {/* Row 1: 3 logos */}
+            <div className="flex w-full">
+              {[1,2,3].map((i) => (
+                <a href="#" key={`r1-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
+                  <span className="text-neutral-400 font-bold text-sm md:text-base group-hover:text-white transition-colors tracking-widest uppercase">Logo {i}</span>
+                </a>
+              ))}
+            </div>
+            {/* Row 2: 4 logos */}
+            <div className="flex w-full">
+              {[4,5,6,7].map((i) => (
+                <a href="#" key={`r2-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
+                  <span className="text-neutral-400 font-bold text-sm md:text-base group-hover:text-white transition-colors tracking-widest uppercase">Logo {i}</span>
+                </a>
+              ))}
+            </div>
+            {/* Row 3: 4 logos */}
+            <div className="flex w-full">
+              {[8,9,10,11].map((i) => (
+                <a href="#" key={`r3-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
+                  <span className="text-neutral-400 font-bold text-sm md:text-base group-hover:text-white transition-colors tracking-widest uppercase">Logo {i}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* WHAT'S NEW */}
       <section id="news" className="py-32 bg-white border-t border-neutral-200">
         <div className="max-w-[1600px] mx-auto px-8">
@@ -351,43 +388,6 @@ function Index() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* COMPANY */}
-      {/* GROUP COMPANY */}
-      <section id="groupcompany" className="pt-32 pb-16 bg-neutral-100">
-        <div className="max-w-[1600px] mx-auto px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-6">Group Company</h2>
-          <p className="text-neutral-600 text-lg mb-16">Introducing HanmiGlobal's Group Companies and Joint Ventures</p>
-          
-          <div className="flex flex-col w-full mb-8 border-l border-t border-neutral-200">
-            {/* Row 1: 3 logos */}
-            <div className="flex w-full">
-              {[1,2,3].map((i) => (
-                <a href="#" key={`r1-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
-                  <span className="text-neutral-400 font-bold text-sm md:text-base group-hover:text-white transition-colors tracking-widest uppercase">Logo {i}</span>
-                </a>
-              ))}
-            </div>
-            {/* Row 2: 4 logos */}
-            <div className="flex w-full">
-              {[4,5,6,7].map((i) => (
-                <a href="#" key={`r2-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
-                  <span className="text-neutral-400 font-bold text-sm md:text-base group-hover:text-white transition-colors tracking-widest uppercase">Logo {i}</span>
-                </a>
-              ))}
-            </div>
-            {/* Row 3: 4 logos */}
-            <div className="flex w-full">
-              {[8,9,10,11].map((i) => (
-                <a href="#" key={`r3-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
-                  <span className="text-neutral-400 font-bold text-sm md:text-base group-hover:text-white transition-colors tracking-widest uppercase">Logo {i}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -495,12 +495,12 @@ function Index() {
 
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 py-8 border-t border-white/10 text-xs text-white/40 font-medium">
             <p>© {new Date().getFullYear()} HanmiGlobal (demo). All rights reserved.</p>
-            <p>Educational reconstruction · Built by <a href="https://github.com/Ray-the-Ui-guy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Heritage Isaac</a></p>
+            <p>Educational reconstruction · Built by <a href="https://heritageisaac.xyz" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Heritage Isaac</a></p>
           </div>
 
           {/* The "Enlarged" Logo Section */}
-          <div className="w-full border-t border-white/10 pt-16 pb-8">
-            <img src={logo1} alt="HanmiGlobal" className="w-full h-auto opacity-30 blur-sm" />
+          <div className="w-full border-t border-white/10 pt-16 -mb-8">
+            <img src={logo1} alt="HanmiGlobal" className="w-full h-auto opacity-30 translate-y-1/4" />
           </div>
         </div>
       </footer>

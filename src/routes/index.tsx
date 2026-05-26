@@ -304,7 +304,7 @@ function Index() {
               <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
               
               {/* Blinking Korea HQ Marker */}
-              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[32%] right-[22%] shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
+              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[32%] left-[22%] shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
                 <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
               </div>
             </div>
@@ -391,11 +391,79 @@ function Index() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section id="testimonials" className="py-32 bg-neutral-100 overflow-hidden border-t border-neutral-200">
+        <div className="max-w-[1600px] mx-auto px-8 mb-16">
+          <div className="inline-block px-4 py-1.5 border border-neutral-300 text-xs font-bold uppercase tracking-widest text-neutral-600 mb-6">
+            Testimonials
+          </div>
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">What our clients say</h2>
+        </div>
+        
+        {/* Layer 1: Left moving */}
+        <div className="flex w-max animate-marquee-left gap-6 mb-8 px-4 hover:[animation-play-state:paused]">
+          {[...Array(8)].map((_, i) => (
+            <div key={`t1-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 group hover:border-black transition-colors">
+              <p className="text-neutral-600 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"HanmiGlobal's proactive management and technical expertise delivered our complex project ahead of schedule."</p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-neutral-300 flex items-center justify-center font-bold text-white shrink-0">C{i+1}</div>
+                <div>
+                  <h4 className="font-bold text-sm tracking-widest uppercase">Client Name {i+1}</h4>
+                  <p className="text-xs text-neutral-500">Global Corporation</p>
+                </div>
+              </div>
+            </div>
+          ))}
+          {[...Array(8)].map((_, i) => (
+            <div key={`t1-dup-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 group hover:border-black transition-colors">
+              <p className="text-neutral-600 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"HanmiGlobal's proactive management and technical expertise delivered our complex project ahead of schedule."</p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-neutral-300 flex items-center justify-center font-bold text-white shrink-0">C{i+1}</div>
+                <div>
+                  <h4 className="font-bold text-sm tracking-widest uppercase">Client Name {i+1}</h4>
+                  <p className="text-xs text-neutral-500">Global Corporation</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Layer 2: Right moving */}
+        <div className="flex w-max animate-marquee-right gap-6 px-4 hover:[animation-play-state:paused]">
+          {[...Array(8)].map((_, i) => (
+            <div key={`t2-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 group hover:border-black transition-colors">
+              <p className="text-neutral-600 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"Their dedication to sustainable practices and innovative solutions completely transformed our infrastructure."</p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-neutral-300 flex items-center justify-center font-bold text-white shrink-0">E{i+1}</div>
+                <div>
+                  <h4 className="font-bold text-sm tracking-widest uppercase">Executive {i+1}</h4>
+                  <p className="text-xs text-neutral-500">Tech Industry</p>
+                </div>
+              </div>
+            </div>
+          ))}
+          {[...Array(8)].map((_, i) => (
+            <div key={`t2-dup-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 group hover:border-black transition-colors">
+              <p className="text-neutral-600 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"Their dedication to sustainable practices and innovative solutions completely transformed our infrastructure."</p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-neutral-300 flex items-center justify-center font-bold text-white shrink-0">E{i+1}</div>
+                <div>
+                  <h4 className="font-bold text-sm tracking-widest uppercase">Executive {i+1}</h4>
+                  <p className="text-xs text-neutral-500">Tech Industry</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* SUPPORT / CONTACT */}
-      <section id="support" className="pt-16 pb-32 bg-white border-t border-neutral-200">
+      <section id="support" className="pt-32 pb-32 bg-white border-t border-neutral-200">
         <div className="max-w-[1600px] mx-auto px-8 grid lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-6">Contact Us</p>
+            <div className="inline-block px-4 py-1.5 border border-neutral-300 text-xs font-bold uppercase tracking-widest text-neutral-600 mb-6">
+              Contact Us
+            </div>
             <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-10">We will excel for our customers.</h2>
             <ul className="space-y-6 text-neutral-700">
               <li className="flex items-start gap-4">
@@ -475,13 +543,16 @@ function Index() {
             <div>
               <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6">Explore</div>
               <ul className="space-y-3 text-sm text-white/80 font-medium">
-                {nav.slice(0, 3).map((n) => <li key={n}><a href={`#${n.toLowerCase()}`} className="hover:text-white transition-colors">{n}</a></li>)}
+                {nav.map((n) => <li key={n}><a href={`#${n.toLowerCase()}`} className="hover:text-white transition-colors">{n}</a></li>)}
               </ul>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6 opacity-0">More</div>
+              <div className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6">Socials</div>
               <ul className="space-y-3 text-sm text-white/80 font-medium">
-                {nav.slice(3).map((n) => <li key={n}><a href={`#${n.toLowerCase()}`} className="hover:text-white transition-colors">{n}</a></li>)}
+                <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Facebook</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">X (Twitter)</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
               </ul>
             </div>
             <div>

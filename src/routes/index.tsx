@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Phone, Envelope, MapPin, CaretDown, List, IconContext } from "@phosphor-icons/react";
+import { ArrowUpRight, Phone, Envelope, MapPin, CaretDown, List, X, IconContext } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -112,6 +112,7 @@ function Index() {
   const [active, setActive] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isBlurred, setIsBlurred] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const refs = [v1, v2];
@@ -169,9 +170,28 @@ function Index() {
             <a href="#support" className="hidden md:inline-block bg-black text-white px-7 py-3 text-sm font-bold hover:bg-neutral-800 transition-colors">
               Contact Us
             </a>
-            <button className="lg:hidden p-2 opacity-80 hover:opacity-100 transition">
-              <List className="size-6" />
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 opacity-80 hover:opacity-100 transition">
+              {isMobileMenuOpen ? <X weight="regular" className="size-6" /> : <List weight="regular" className="size-6" />}
             </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu Dropdown */}
+        <div className={`absolute top-full left-0 right-0 mt-2 bg-white border border-neutral-200 shadow-xl flex flex-col lg:hidden overflow-hidden transition-all duration-300 origin-top ${isMobileMenuOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0 pointer-events-none"}`}>
+          {nav.map((n) => (
+            <a 
+              key={n} 
+              href={`#${n.toLowerCase().replace(/\s/g, "")}`} 
+              className="text-sm font-bold tracking-widest text-black border-b border-neutral-100 px-6 py-4 hover:bg-neutral-50 transition-colors uppercase"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {n}
+            </a>
+          ))}
+          <div className="p-6">
+            <a href="#support" onClick={() => setIsMobileMenuOpen(false)} className="block w-full bg-black text-white px-7 py-4 text-sm font-bold tracking-widest text-center uppercase">
+              Contact Us
+            </a>
           </div>
         </div>
       </header>
@@ -318,7 +338,7 @@ function Index() {
               <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
               
               {/* Blinking Korea HQ Marker */}
-              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[32%] left-[22%] ml-[14px] shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
+              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[32%] left-[22%] ml-[34px] shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
                 <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
               </div>
             </div>

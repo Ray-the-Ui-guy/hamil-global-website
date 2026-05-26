@@ -58,22 +58,38 @@ const projects = [
 
 function Counter({ target }: { target: number }) {
   const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+
   useEffect(() => {
-    let start = 0;
-    const duration = 2000;
-    const step = Math.max(Math.floor(duration / target), 16);
-    const timer = setInterval(() => {
-      start += Math.ceil(target / (duration / step));
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(start);
-      }
-    }, step);
-    return () => clearInterval(timer);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let start = 0;
+          const duration = 4000; // Slower duration
+          const step = Math.max(Math.floor(duration / target), 16);
+          const timer = setInterval(() => {
+            start += Math.ceil(target / (duration / step));
+            if (start >= target) {
+              setCount(target);
+              clearInterval(timer);
+            } else {
+              setCount(start);
+            }
+          }, step);
+          observer.disconnect(); // Only animate once
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    
+    return () => observer.disconnect();
   }, [target]);
-  return <>{count.toLocaleString()}</>;
+
+  return <span ref={ref}>{count.toLocaleString()}</span>;
 }
 
 function Index() {
@@ -129,7 +145,7 @@ function Index() {
           <div className="flex items-center gap-4 lg:gap-6 text-xs px-4 md:px-6 ml-auto lg:ml-0">
             <DropdownMenu>
               <DropdownMenuTrigger className={`hidden md:flex items-center gap-1 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest border transition-colors duration-300 outline-none ${isScrolled ? "border-neutral-200 hover:bg-neutral-100" : "border-white/30 hover:bg-white/10"}`}>
-                ENG <CaretDown className="size-3 opacity-70" />
+                ENG <CaretDown weight="regular" className="size-3 opacity-70" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="min-w-[80px] rounded-lg shadow-xl border border-neutral-100 bg-white p-1">
                 <DropdownMenuItem className="text-[10px] font-bold tracking-widest cursor-pointer rounded-md hover:bg-neutral-100 px-3 py-2">KOR</DropdownMenuItem>
@@ -211,7 +227,7 @@ function Index() {
                     <h3 className="text-2xl md:text-3xl font-bold tracking-tight group-hover:text-neutral-600 transition-colors pr-4">{b.title}</h3>
                     <p className="mt-4 text-neutral-500 font-medium pr-4 leading-relaxed">{b.desc}</p>
                   </div>
-                  <ArrowUpRight className="size-8 md:size-10 text-neutral-400 shrink-0 group-hover:text-black group-hover:-translate-y-1 group-hover:translate-x-1 transition-all mt-1" />
+                  <ArrowUpRight weight="regular" className="size-6 md:size-8 text-neutral-400 shrink-0 group-hover:text-black group-hover:-translate-y-1 group-hover:translate-x-1 transition-all mt-1" />
                 </div>
                 {/* Image Placeholder (Image Last) */}
                 <div className="aspect-[3/4] bg-neutral-100 relative overflow-hidden flex items-center justify-center border border-neutral-200 group-hover:bg-neutral-200 transition-colors">
@@ -266,7 +282,9 @@ function Index() {
         <div className="max-w-[1600px] mx-auto px-8">
           <div className="grid lg:grid-cols-12 gap-12 mb-16">
             <div className="lg:col-span-6">
-              <p className="text-xs uppercase tracking-[0.3em] text-white/50 mb-6">Global Network</p>
+              <div className="inline-block px-4 py-1.5 border border-white/20 text-xs font-bold uppercase tracking-widest text-white mb-6">
+                Global Network
+              </div>
               <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">Building territories beyond Korea and around the world</h2>
             </div>
             <div className="lg:col-span-6 self-end text-white/70 text-lg">
@@ -280,7 +298,17 @@ function Index() {
             </div>
           </div>
           <div className="w-full rounded-2xl overflow-hidden bg-white/5 p-4 border border-white/10 mt-16">
-            <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
+            <div className="relative w-full">
+              <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
+              
+              {/* Blinking Korea HQ Marker */}
+              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[38%] right-[17%] shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
+                <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
+                <span className="absolute top-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] tracking-widest uppercase font-bold text-green-400 pointer-events-none">
+                  Seoul HQ
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -440,6 +468,9 @@ function Index() {
         <div className="max-w-[1600px] mx-auto px-8">
           <div className="grid md:grid-cols-4 gap-12 mb-20">
             <div className="md:col-span-2 pr-12">
+              <div className="flex items-center mb-6">
+                <img src={logo1} alt="HanmiGlobal Logo" className="h-6 w-auto" />
+              </div>
               <p className="text-sm text-white/60 max-w-sm leading-relaxed">Engineering structures that outlast generations — across commercial, residential, industrial and infrastructure projects.</p>
             </div>
             <div>

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Phone, Envelope, MapPin, CaretDown, List, X, IconContext } from "@phosphor-icons/react";
+import { ArrowUpRight, Phone, Envelope, MapPin, CaretDown, List, X, IconContext, Buildings, Globe, Users, Flag, Briefcase, Trophy } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -324,12 +324,37 @@ function Index() {
               <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">Building territories beyond Korea and around the world</h2>
             </div>
             <div className="lg:col-span-6 self-end text-white/70 text-lg">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-6 pt-8 border-t border-white/20">
-                <div><div className="text-4xl md:text-5xl font-bold text-white"><Counter target={40} />+</div><div className="text-xs text-white/50 mt-3 uppercase tracking-wider">Global Branches</div></div>
-                <div><div className="text-4xl md:text-5xl font-bold text-white"><Counter target={2500} />+</div><div className="text-xs text-white/50 mt-3 uppercase tracking-wider">Professional Employees</div></div>
-                <div><div className="text-4xl md:text-5xl font-bold text-white"><Counter target={60} />+</div><div className="text-xs text-white/50 mt-3 uppercase tracking-wider">Countries</div></div>
-                <div><div className="text-4xl md:text-5xl font-bold text-white"><Counter target={3200} />+</div><div className="text-xs text-white/50 mt-3 uppercase tracking-wider">Projects</div></div>
-                <div className="col-span-2 md:col-span-1"><div className="text-4xl md:text-5xl font-bold text-white"><Counter target={8} />th</div><div className="text-xs text-white/50 mt-3 uppercase tracking-wider">World Ranking (ENR 2025)</div></div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6 pt-8 border-t border-white/20">
+                <div className="flex flex-col items-start">
+                  <Buildings className="size-6 text-green-400 mb-3" />
+                  <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={11} /></div>
+                  <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Group Company</div>
+                </div>
+                <div className="flex flex-col items-start">
+                  <Globe className="size-6 text-green-400 mb-3" />
+                  <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={13} /></div>
+                  <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Global Branchs</div>
+                </div>
+                <div className="flex flex-col items-start">
+                  <Users className="size-6 text-green-400 mb-3" />
+                  <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={2100} />+</div>
+                  <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Professional Employees</div>
+                </div>
+                <div className="flex flex-col items-start">
+                  <Flag className="size-6 text-green-400 mb-3" />
+                  <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={66} />+</div>
+                  <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Countries</div>
+                </div>
+                <div className="flex flex-col items-start">
+                  <Briefcase className="size-6 text-green-400 mb-3" />
+                  <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={3202} />+</div>
+                  <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">Projects</div>
+                </div>
+                <div className="flex flex-col items-start">
+                  <Trophy className="size-6 text-green-400 mb-3" />
+                  <div className="text-3xl md:text-4xl font-extrabold text-white"><Counter target={8} /></div>
+                  <div className="text-xs text-white/50 mt-2 tracking-wider font-semibold">World Ranking (ENR 2025)</div>
+                </div>
               </div>
             </div>
           </div>
@@ -338,7 +363,7 @@ function Index() {
               <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
               
               {/* Blinking Korea HQ Marker */}
-              <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full top-[29%] left-[22%] z-10" style={{marginLeft: '190px', boxShadow: '0 0 15px rgba(34,197,94,0.8)'}}>
+              <div className="absolute hidden lg:block w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full top-[29%] left-[22%] z-10" style={{marginLeft: '190px', boxShadow: '0 0 15px rgba(34,197,94,0.8)'}}>
                 <div className="absolute inset-0 bg-green-400 rounded-full animate-ping"></div>
               </div>
             </div>

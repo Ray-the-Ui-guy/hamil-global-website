@@ -503,7 +503,7 @@ function Index() {
 
           {/* The "Enlarged" Logo Section */}
           <div className="w-full border-t border-white/10 pt-16 pb-8">
-            <img src={logo1} alt="HanmiGlobal" className="w-full h-auto opacity-30" />
+            <img src={logo1} alt="HanmiGlobal" className="w-full h-auto opacity-30 blur-sm" />
           </div>
         </div>
       </footer>

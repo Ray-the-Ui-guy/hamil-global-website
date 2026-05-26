@@ -333,13 +333,13 @@ function Index() {
               </div>
             </div>
           </div>
-          <div className="w-full rounded-2xl overflow-hidden bg-white/5 p-4 border border-white/10 mt-16">
+          <div className="w-full rounded-2xl bg-white/5 p-4 border border-white/10 mt-16">
             <div className="relative w-full">
               <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
               
               {/* Blinking Korea HQ Marker */}
-              <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full top-[32%] left-[22%] ml-[34px] shadow-[0_0_15px_rgba(34,197,94,0.8)] z-10">
-                <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
+              <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full top-[32%] left-[22%] ml-[60px] z-10" style={{boxShadow: '0 0 15px rgba(34,197,94,0.8)'}}>
+                <div className="absolute inset-0 bg-green-400 rounded-full animate-ping"></div>
               </div>
             </div>
           </div>
@@ -580,8 +580,8 @@ function Index() {
           </div>
 
           {/* The "Enlarged" Logo Section */}
-          <div className="w-full border-t border-white/10 pt-16 -mb-8">
-            <img src={logo1} alt="HanmiGlobal" className="w-full h-auto opacity-30 translate-y-1/4" />
+          <div className="w-full border-t border-white/10 pt-16 -mb-4">
+            <img src={logo1} alt="HanmiGlobal" className="w-full h-auto opacity-[0.15] translate-y-[15%]" />
           </div>
         </div>
       </footer>

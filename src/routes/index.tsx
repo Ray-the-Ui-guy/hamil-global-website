@@ -182,14 +182,14 @@ function Index() {
             <a 
               key={n} 
               href={`#${n.toLowerCase().replace(/\s/g, "")}`} 
-              className="text-sm font-bold tracking-widest text-black border-b border-neutral-100 px-6 py-4 hover:bg-neutral-50 transition-colors uppercase"
+              className="text-sm font-bold tracking-widest text-black border-b border-neutral-100 px-6 py-4 hover:bg-neutral-50 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {n}
             </a>
           ))}
           <div className="p-6">
-            <a href="#support" onClick={() => setIsMobileMenuOpen(false)} className="block w-full bg-black text-white px-7 py-4 text-sm font-bold tracking-widest text-center uppercase">
+            <a href="#support" onClick={() => setIsMobileMenuOpen(false)} className="block w-full bg-black text-white px-7 py-4 text-sm font-bold tracking-widest text-center">
               Contact Us
             </a>
           </div>
@@ -338,7 +338,7 @@ function Index() {
               <img src={sectionGlobalMap} alt="Global map" className="w-full h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-700" />
               
               {/* Blinking Korea HQ Marker */}
-              <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full top-[29%] left-[22%] z-10" style={{marginLeft: '185px', boxShadow: '0 0 15px rgba(34,197,94,0.8)'}}>
+              <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full top-[29%] left-[22%] z-10" style={{marginLeft: '190px', boxShadow: '0 0 15px rgba(34,197,94,0.8)'}}>
                 <div className="absolute inset-0 bg-green-400 rounded-full animate-ping"></div>
               </div>
             </div>
@@ -358,7 +358,7 @@ function Index() {
             <div className="flex w-full">
               {[1,2,3].map((i) => (
                 <a href="#" key={`r1-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
-                  <img src={logo1} alt="HanmiGlobal" className="h-5 md:h-6 w-auto opacity-40 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
+                  <img src={logo1} alt="HanmiGlobal" className="h-3 md:h-4 lg:h-6 w-auto opacity-40 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
                 </a>
               ))}
             </div>
@@ -366,7 +366,7 @@ function Index() {
             <div className="flex w-full">
               {[4,5,6,7].map((i) => (
                 <a href="#" key={`r2-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
-                  <img src={logo1} alt="HanmiGlobal" className="h-5 md:h-6 w-auto opacity-40 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
+                  <img src={logo1} alt="HanmiGlobal" className="h-3 md:h-4 lg:h-6 w-auto opacity-40 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
                 </a>
               ))}
             </div>
@@ -374,7 +374,7 @@ function Index() {
             <div className="flex w-full">
               {[8,9,10,11].map((i) => (
                 <a href="#" key={`r3-${i}`} className="group flex-1 h-24 md:h-32 bg-white border-r border-b border-neutral-200 flex items-center justify-center hover:bg-black transition-colors">
-                  <img src={logo1} alt="HanmiGlobal" className="h-5 md:h-6 w-auto opacity-40 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
+                  <img src={logo1} alt="HanmiGlobal" className="h-3 md:h-4 lg:h-6 w-auto opacity-40 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" />
                 </a>
               ))}
             </div>

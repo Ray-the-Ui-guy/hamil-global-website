@@ -437,7 +437,7 @@ function Index() {
         {/* Layer 1: Left moving */}
         <div className="flex w-max animate-marquee-left gap-6 mb-8 px-4 hover:[animation-play-state:paused]">
           {[...testimonials1, ...testimonials1, ...testimonials1, ...testimonials1].map((t, i) => (
-            <div key={`t1-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 rounded-2xl">
+            <div key={`t1-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0">
               <p className="text-neutral-600 mb-6 font-medium leading-relaxed text-lg">"{t.quote}"</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold shrink-0 bg-neutral-100 text-neutral-800">{t.initial}</div>
@@ -453,7 +453,7 @@ function Index() {
         {/* Layer 2: Right moving */}
         <div className="flex w-max animate-marquee-right gap-6 px-4 hover:[animation-play-state:paused]">
           {[...testimonials2, ...testimonials2, ...testimonials2, ...testimonials2].map((t, i) => (
-            <div key={`t2-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 rounded-2xl">
+            <div key={`t2-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0">
               <p className="text-neutral-600 mb-6 font-medium leading-relaxed text-lg">"{t.quote}"</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold shrink-0 bg-neutral-100 text-neutral-800">{t.initial}</div>

@@ -147,9 +147,9 @@ function Index() {
               <DropdownMenuTrigger className={`hidden md:flex items-center gap-1 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest border transition-colors duration-300 outline-none ${isScrolled ? "border-neutral-200 hover:bg-neutral-100" : "border-white/30 hover:bg-white/10"}`}>
                 ENG <CaretDown weight="regular" className="size-3 opacity-70" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-[80px] rounded-lg shadow-xl border border-neutral-100 bg-white p-1">
-                <DropdownMenuItem className="text-[10px] font-bold tracking-widest cursor-pointer rounded-md hover:bg-neutral-100 px-3 py-2">KOR</DropdownMenuItem>
-                <DropdownMenuItem className="text-[10px] font-bold tracking-widest cursor-pointer rounded-md hover:bg-neutral-100 px-3 py-2">CHN</DropdownMenuItem>
+              <DropdownMenuContent align="end" className="min-w-[80px] rounded-none shadow-xl border border-neutral-100 bg-white p-1">
+                <DropdownMenuItem className="text-[10px] font-bold tracking-widest cursor-pointer rounded-none hover:bg-neutral-100 px-3 py-2">KOR</DropdownMenuItem>
+                <DropdownMenuItem className="text-[10px] font-bold tracking-widest cursor-pointer rounded-none hover:bg-neutral-100 px-3 py-2">CHN</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <a href="#support" className="hidden md:inline-block bg-black text-white px-7 py-3 text-sm font-bold hover:bg-neutral-800 transition-colors">

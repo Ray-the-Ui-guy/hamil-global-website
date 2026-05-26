@@ -50,17 +50,17 @@ const newsList = [
 ];
 
 const testimonials1 = [
-  { name: "Michael Chen", initial: "M", role: "Global Corporation", quote: "HanmiGlobal's proactive management and technical expertise delivered our complex project ahead of schedule.", bg: "bg-blue-50", avatarBg: "bg-blue-200 text-blue-800" },
-  { name: "Sarah Jenkins", initial: "S", role: "Tech Industry", quote: "Their dedication to sustainable practices completely transformed our infrastructure approach.", bg: "bg-emerald-50", avatarBg: "bg-emerald-200 text-emerald-800" },
-  { name: "David Alaba", initial: "D", role: "Logistics", quote: "The CM at Risk model they provided gave us total confidence in our budget and timeline.", bg: "bg-purple-50", avatarBg: "bg-purple-200 text-purple-800" },
-  { name: "Elena Rodriguez", initial: "E", role: "Retail Group", quote: "Exceptional quality control and supervision from start to finish. Highly recommended.", bg: "bg-rose-50", avatarBg: "bg-rose-200 text-rose-800" },
+  { name: "Michael Chen", initial: "M", role: "Global Corporation", quote: "HanmiGlobal's proactive management and technical expertise delivered our complex project ahead of schedule." },
+  { name: "Sarah Jenkins", initial: "S", role: "Tech Industry", quote: "Their dedication to sustainable practices completely transformed our infrastructure approach." },
+  { name: "David Alaba", initial: "D", role: "Logistics", quote: "The CM at Risk model they provided gave us total confidence in our budget and timeline." },
+  { name: "Elena Rodriguez", initial: "E", role: "Retail Group", quote: "Exceptional quality control and supervision from start to finish. Highly recommended." },
 ];
 
 const testimonials2 = [
-  { name: "James Wilson", initial: "J", role: "Energy Sector", quote: "Outstanding engineering and consulting. They navigated the regulatory landscape perfectly.", bg: "bg-amber-50", avatarBg: "bg-amber-200 text-amber-800" },
-  { name: "Anita Desai", initial: "A", role: "Real Estate", quote: "Our redevelopment project was a massive success thanks to their specialized tech services.", bg: "bg-cyan-50", avatarBg: "bg-cyan-200 text-cyan-800" },
-  { name: "Robert Fox", initial: "R", role: "Infrastructure", quote: "They brought international expertise that proved invaluable to our overseas expansion.", bg: "bg-fuchsia-50", avatarBg: "bg-fuchsia-200 text-fuchsia-800" },
-  { name: "Lisa Wong", initial: "L", role: "Healthcare", quote: "Their focus on safety and precision is exactly what our medical facility project needed.", bg: "bg-teal-50", avatarBg: "bg-teal-200 text-teal-800" },
+  { name: "James Wilson", initial: "J", role: "Energy Sector", quote: "Outstanding engineering and consulting. They navigated the regulatory landscape perfectly." },
+  { name: "Anita Desai", initial: "A", role: "Real Estate", quote: "Our redevelopment project was a massive success thanks to their specialized tech services." },
+  { name: "Robert Fox", initial: "R", role: "Infrastructure", quote: "They brought international expertise that proved invaluable to our overseas expansion." },
+  { name: "Lisa Wong", initial: "L", role: "Healthcare", quote: "Their focus on safety and precision is exactly what our medical facility project needed." },
 ];
 
 const projects = [
@@ -417,10 +417,10 @@ function Index() {
         {/* Layer 1: Left moving */}
         <div className="flex w-max animate-marquee-left gap-6 mb-8 px-4 hover:[animation-play-state:paused]">
           {[...testimonials1, ...testimonials1, ...testimonials1, ...testimonials1].map((t, i) => (
-            <div key={`t1-${i}`} className={`w-[450px] p-8 border border-neutral-200 ${t.bg} shrink-0 group hover:border-black transition-colors rounded-2xl`}>
-              <p className="text-neutral-700 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"{t.quote}"</p>
+            <div key={`t1-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 rounded-2xl">
+              <p className="text-neutral-600 mb-6 font-medium leading-relaxed text-lg">"{t.quote}"</p>
               <div className="flex items-center gap-4">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold shrink-0 ${t.avatarBg}`}>{t.initial}</div>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold shrink-0 bg-neutral-100 text-neutral-800">{t.initial}</div>
                 <div>
                   <h4 className="font-bold text-sm tracking-widest uppercase">{t.name}</h4>
                   <p className="text-xs text-neutral-500">{t.role}</p>
@@ -433,10 +433,10 @@ function Index() {
         {/* Layer 2: Right moving */}
         <div className="flex w-max animate-marquee-right gap-6 px-4 hover:[animation-play-state:paused]">
           {[...testimonials2, ...testimonials2, ...testimonials2, ...testimonials2].map((t, i) => (
-            <div key={`t2-${i}`} className={`w-[450px] p-8 border border-neutral-200 ${t.bg} shrink-0 group hover:border-black transition-colors rounded-2xl`}>
-              <p className="text-neutral-700 mb-6 font-medium leading-relaxed group-hover:text-black transition-colors text-lg">"{t.quote}"</p>
+            <div key={`t2-${i}`} className="w-[450px] p-8 border border-neutral-200 bg-white shrink-0 rounded-2xl">
+              <p className="text-neutral-600 mb-6 font-medium leading-relaxed text-lg">"{t.quote}"</p>
               <div className="flex items-center gap-4">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold shrink-0 ${t.avatarBg}`}>{t.initial}</div>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center font-bold shrink-0 bg-neutral-100 text-neutral-800">{t.initial}</div>
                 <div>
                   <h4 className="font-bold text-sm tracking-widest uppercase">{t.name}</h4>
                   <p className="text-xs text-neutral-500">{t.role}</p>
